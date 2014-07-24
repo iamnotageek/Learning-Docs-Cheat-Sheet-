@@ -1,0 +1,150 @@
+MongoDb - Non relation Data store for JSON documents.
+JSON -
+{"name":"andrew"}
+name is a key
+value is andrew
+{"a":4,
+ "b":5,
+ "c":7}
+its a JSON Document store.
+
+Its also Schemaless:
+Documents need not have schema.
+
+Where is it fit in the Real World ?
+MemCache D - Scalable and high performance but no 
+
+scalabilityality.
+
+MongoDB provides both the scalability and Performance.(Can 
+
+be indexed.)
+-it doesnot support joins :((between two collections)
+-Transactions accross multiple documents - lack in MongoDb.
+
+App:
+MongoD Process - Database on the box
+MongoShell will intract wth process box.
+Python with Bottle Framework
+Pymongo interact to MongoD.
+
+Mongo Shell:
+startig mongo shell 
+>> mongo
+>> use test
+switched to db test.
+>>db.things.save( a: 1,b:2,c:5)
+things - collections 
+save is operation
+
+db.things.find() is for displaying all the json's documents.
+db.things.find()
+db.things.find({ a: 1 })
+will give you the list of documents where {a : 1}
+
+db.things.save( {name: "ram", address: { street: "Indra 
+
+Nagar", city: "Hyd", zip: "500020", house_number: 404}})
+
+db.things.find().pretty() - clean Display.(Display in 
+
+Hierarchy and showed in Dictonary way.)
+
+Valid JSON Documents:
+1) {a:1, b:2, c:3}
+2) {a:1, b:2,c:[1,2,3,4,5]}
+3) {a:1, b:{}, c:[{a:1,b:2},5,6]}
+4) {}
+
+Install MongoDB:
+the MongoDB files will be installed in Path:
+"C:\Program Files\MongoDB 2.6 Standard\bin"
+
+mongo.exe   - Is for starting the console shell for wrting 
+
+the codes and Inserting an updating the data.(CRUD 
+
+operations.)
+mongod.exe  - This is used to run the development server and 
+
+check the data through the server.
+
+Initially when we install we dont have any data inside the 
+
+mongodb. so initially when we try to run the application 
+
+through cmd through commands say:
+>mongod.exe
+it will show an error page because we didnt sepcify the 
+
+folder to where it can store or from where it can retreive 
+
+the data.
+for that the commands used are:
+> mkdir \data
+> mkdir \data\db
+
+and then start inserting the data using the commands we 
+
+learned earlier for example:
+> db.things.insert({ name : "Raghuram" })
+we get a result of WriteResult({ "nInserted" : 1})
+then we can check the data by
+> db.things.find()
+or specifically if we want to search:
+> db.things.find({name: "Raghuram"})
+It will give me the id and name of "Raghuram"
+ex:- 
+{ "_id" : ObjectId("53d15d5009122d546a6e5b07"), "name" : 
+
+"Raghuram" }
+
+We will develop now a Blog by mongodb
+The framework we use is Bottle: it is a Bottle.
+
+Initially we have to install the python for downloading or 
+
+working on bottle. 
+- Download Python .exe from the main site. (v2.7)
+then install the python and then add the environment 
+
+variables by:
+<some-text>;C:Python27/ -- is where the python is installed.
+Then to work for easy_install we have install the setup 
+
+tools and for that go through the link and download the 
+
+setuptools exe depending on the python version u installed.
+download and install and then you will be able to c the 
+
+easy_install exe's in the python folder scripts file. 
+and then we install bottle by command:
+
+> easy_install.exe -U bottle
+And then the bottle framework gets installed.
+
+Now installing the Pymongo on Windows platform.
+Same way as we installed python
+- Go to http://api.mongodb.org/python/ and install the 
+
+current and then check for python version and download that 
+
+and then exe is downloaded and then install it and to check 
+
+whether the pymongo is installed or not.
+
+write a small program(Included in the base folder.)
+run that and it will show you the users you have added 
+
+through db.names.insert({ name: "Raghuram"})
+
+IMP:
+db.things.insert will insert in things.
+db.names.insert will insert in names.
+db.users.insert will insert in users.
+
+Then run the pymongo command you will get an name output.
+command: 
+>python pymongo_getting_started.py
+Result: 
+Raghuram
