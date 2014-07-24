@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> </title>
+		<script type="text/javascript">
+/*			var someValue = 24;
+			var otherValue = 23;
+			if(someValue < 30)
+			{
+				alert("first Case..!!");
+			} else if (someValue > 30) 
+			{
+				alert("Second Case..!!");
+			} else if (someValue == 30) 
+			{
+				alert("Third Case..!!");
+			} else
+			{
+				alert("Fourth Case..!!");
+			}
+
+			if (someValue != 24 && otherValue == 26) 
+			{
+				alert("Tenth Case..!!")
+			}
+
+			if (someValue === 24 || otherValue === 26) 
+			{
+				alert("Tenth Case..!!")
+			}
+			someValue = true;
+			if(!someValue){
+				//!someValue = someValue === false;
+				}
+			var myResult = "";
+			myResult = (someValue === 24)? "equal" : "not equal";
+			alert(myResult);
+
+			//functions:
+			function myNewFunction() {
+				alert("howdy..!!");
+			};
+
+		function myNewFunction(myValue) {
+						alert("howdy..!! " + " " +myValue);
+					};
+
+		myNewFunction("Ram");
+
+	function add(firstNumber, secondNumber){
+		return firstNumber + secondNumber;
+	}
+	var myResult = add(1,2);
+	alert(myResult)
+*/
+/*Functions Named and unnamed Passing values and literals annonemous function :P*/
+	//SImple Function //
+	// function myNewFunction () {
+	// 	alert("Raghuram");
+	// }
+	// myNewFunction();
+/*
+	//Functions with a Parameter:
+	function myNewFunction(myValue) {
+		alert("Howdy, "+ myValue);
+	}
+	myNewFunction("Pardner");
+
+	//example 2 passing more than one parameters.
+	function add (firstNumber, secondNumber) {
+		return firstNumber + secondNumber;
+		//or simply return
+	}
+	var myResult = add(1,2);
+	alert(myResult);
+
+*/
+/*
+	function add () {
+		var tempValue = 0;
+		for(i=0; i< arguments.length; i++)
+		{
+			tempValue += arguments[i];
+		}
+		return tempValue;
+	}
+	var myValue = add(1,2,3,4,5);
+	alert(myValue);
+*/
+/*
+//Function Literal
+	var addMe = function(){
+		return arguments[0] + arguments[1s];
+	}
+	var myNewValue = addMe(1,2);
+	alert(myNewValue);
+*/
+/*
+//Anonymous Function:
+var myResult = (function () {
+	return arguments[0] + arguments [1];
+})(1,2);
+alert(myResult);
+
+
+alert((function () {
+	return arguments[0] + arguments [1];
+})(1,2));
+*/
+
+
+		</script>
+	</head>
+	<body>
+		<input type = "submit" value="Click Me.." onclick="myNewFunction();" />
+	</body>
+</html>
